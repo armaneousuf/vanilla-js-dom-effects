@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2F2ED;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.card {
+    min-height: 350px;
+    background-color: #D9EFBD;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.card img {
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card .status {
+    font-size: 1.5rem;
+}
+
+.card .btn .add-friend {
+    border: none;
+    cursor: pointer;
+    background-color: #2C5745;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}

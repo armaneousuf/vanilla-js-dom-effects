@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Task 3: Sticky section headers</title>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #f4f4f4;
+  }
+
+  .list-container {
+    width: 320px;
+    height: 400px;
+    margin-top: 40px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .group-header {
+    background-color: rgb(61, 186, 61);
+    position: sticky;
+    top: 0;
+
+    padding: 8px 16px;
+    font-weight: bold;
+  }
+
+  .item {
+    padding: 10px 16px;
+    border-bottom: 1px solid #eee;
+  }
+</style>
+</head>
+<body>
+
+  <div class="list-container" id="list">
+  </div>
+
+  <script>
+    const list = document.getElementById('list');
+    const letters = ['A', 'B', 'C', 'D', 'E'];
+    const namesByLetter = {
+      A: ['Alice', 'Aaron', 'Amara'],
+      B: ['Ben', 'Bianca', 'Bilal'],
+      C: ['Carla', 'Chen', 'Colin'],
+      D: ['Diya', 'Derek', 'Dana'],
+      E: ['Eli', 'Emma', 'Ehsan'],
+    };
+
+    letters.forEach(letter => {
+      const header = document.createElement('div');
+      header.className = 'group-header';
+      header.textContent = letter;
+      list.appendChild(header);
+
+      namesByLetter[letter].forEach(name => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.textContent = name;
+        list.appendChild(item);
+      });
+    });
+  </script>
+
+</body>
+</html>

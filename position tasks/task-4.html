@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Task 4: Modal overlay</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f4f4;
+  }
+
+  button#open-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+  }
+
+  .backdrop {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    width: 280px;
+  }
+
+  .modal h2 {
+    margin-top: 0;
+  }
+
+  .modal button {
+    margin-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+  <button id="open-btn">Open modal</button>
+
+  <div class="backdrop" id="backdrop">
+    <div class="modal">
+      <h2>Hello</h2>
+      <p>This is a modal.</p>
+      <button id="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('open-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const backdrop = document.getElementById('backdrop');
+
+    openBtn.addEventListener('click', () => {
+      backdrop.style.display = 'flex'
+    });
+
+    closeBtn.addEventListener('click', () => {
+      backdrop.style.display = 'none'
+    });
+
+    backdrop.addEventListener('click', (e) => {
+        backdrop.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

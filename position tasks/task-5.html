@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Task 5: Scroll-reactive header</title>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background: white;
+    box-shadow: 10px 10px 5px 0px rgba(141, 121, 121, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.2s ease;
+  }
+
+  header.scrolled {
+    height: 60px;
+    background-color: #f1e1e1;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  main {
+    padding-top: 104px;
+  }
+
+  .spacer {
+    height: 1500px;
+    background: linear-gradient(#f4f4f4, #e0e0e0);
+  }
+</style>
+</head>
+<body>
+
+  <header id="site-header">My site</header>
+
+  <main>
+    <h1>Scroll down</h1>
+    <div class="spacer"></div>
+  </main>
+
+  <script>
+    const header = document.getElementById('site-header');
+    const SCROLL_THRESHOLD = 100; // px
+
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > SCROLL_THRESHOLD){
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled')
+      }
+    });
+  </script>
+
+</body>
+</html>
