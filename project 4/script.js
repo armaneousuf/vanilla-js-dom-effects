@@ -14,8 +14,10 @@ elements.forEach((element) => {
   });
 
   element.addEventListener("mousemove", (e) => {
-    img.style.left = e.offsetX + 20 + "px";
-    img.style.top = e.offsetY - 40 + "px";
-    // console.log(e);
-  });
+  const rect = element.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  img.style.left = x + 20 + "px";
+  img.style.top = y - 40 + "px";
+});
 });

@@ -4,9 +4,20 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 4vw;
+    text-align: center;
+}
+
 body {
     background-color: #111;
     color: #fff;
+}
+
+.element h2 {
+    font-size: 3vw;
+    margin-left: 50px;
+    mix-blend-mode: difference;
 }
 
 .element {
@@ -22,4 +33,5 @@ body {
     border: 2px solid #00ADD8;
     opacity: 0;
     position: absolute;
+    z-index: -1000;
 }
