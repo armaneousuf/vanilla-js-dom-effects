@@ -9,14 +9,23 @@ body {
     align-items: center;
     justify-content: center;
     height: 100dvh;
+    background-color: #F8F4E3;
+}
+
+.container {
+    height: 500px;
+    width: 300px;
+    position: relative;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 10px;
 }
 
 .stories {
     height: 450px;
     width: 290px;
-    border: 1px solid hsl(0, 20%, 90%);
     white-space: nowrap;
     overflow-x: auto;
+    position: absolute;
 }
 
 .stories::-webkit-scrollbar {
@@ -38,4 +47,15 @@ body {
     width: 60px;
     object-fit: cover;
     object-position: center;
+}
+
+.full-screen {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: red;
+    display: none;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
 }
