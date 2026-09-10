@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+
+.stories {
+    height: 450px;
+    width: 290px;
+    border: 1px solid hsl(0, 20%, 90%);
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.stories::-webkit-scrollbar {
+    display: none;
+}
+
+.story {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid hsl(6, 79%, 43%);
+    margin: 20px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.stories img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    object-position: center;
+}
