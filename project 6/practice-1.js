@@ -11,6 +11,7 @@ let Bank = (function (){
 
     function addBalance(value){
         TotalBalance += value;
+        console.log(TotalBalance);
     }
 
     function withdraw(value){
@@ -28,10 +29,10 @@ let Bank = (function (){
     }
 })();
 
-Bank.checkBalance();
-Bank.withdraw(20000);
-Bank.setBalance(50000);
-Bank.checkBalance();
-Bank.addBalance(25000);
-Bank.checkBalance();
+Bank.check();
+Bank.drawings(20000);
+Bank.set(50000);
+Bank.check();
+Bank.add(25000);
+Bank.check();
 
