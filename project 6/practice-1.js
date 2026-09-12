@@ -21,10 +21,10 @@ let Bank = (function (){
     }
 
     return {
-        checkBalance, 
-        setBalance,
-        addBalance,
-        withdraw
+        check: checkBalance, 
+        set: setBalance,
+        add: addBalance,
+        drawings: withdraw
     }
 })();
 
